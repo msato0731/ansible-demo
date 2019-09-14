@@ -1,3 +1,4 @@
+# Docker
 ## スタート
 ```
 docker-compose up -d
@@ -18,6 +19,7 @@ docker-compose exec controller /bin/bash
 docker-compose exec target /bin/bash
 ```
 
+
 ## コンテナ削除
 ```
 docker-compose down
@@ -28,6 +30,14 @@ docker-compose down
 docker images
 docker rmi <イメージID>
 ```
+
+# Ansible
+## Ansible実行(controllerにて)
+```
+cd /ansible
+ansible-playbook -i inventory/local site.yml
+```
+※インベントリは省略可
 
 ## targetへhttpアクセス
 ```
