@@ -18,11 +18,18 @@ docker-compose exec controller /bin/bash
 docker-compose exec target /bin/bash
 ```
 
-## コンテナ設定変更
-### 削除
+## コンテナ削除
 ```
-docker-compose stop
 docker-compose down
+```
+
+## イメージ削除
+```
 docker images
 docker rmi <イメージID>
+```
+
+## targetへhttpアクセス
+```
+http://localhost:8080/
 ```
