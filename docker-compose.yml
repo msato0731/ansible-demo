@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  controller:
+    build: ./Docker/controller/
+    privileged: true
+    volumes:
+      - "./ansible:/ansible"
+  target:
+    build: ./Docker/target/
+    privileged: true
+    ports:
+    - "127.0.0.1:8080:80"

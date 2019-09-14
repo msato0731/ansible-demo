@@ -1,0 +1,10 @@
+- name: yum install httpd
+  yum:
+    name: httpd
+    state: latest
+
+- name: httpd enable
+  systemd:
+    name: httpd
+    state: started
+    enabled: yes
